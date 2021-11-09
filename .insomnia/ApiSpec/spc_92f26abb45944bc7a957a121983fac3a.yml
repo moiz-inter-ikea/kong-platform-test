@@ -1,0 +1,152 @@
+_id: spc_92f26abb45944bc7a957a121983fac3a
+type: ApiSpec
+parentId: wrk_eb8af39a397046c0a99b44b86a21e802
+modified: 1636461666033
+created: 1636460049843
+fileName: platformTest.yaml
+contents: >
+  openapi: 3.0.0
+
+  info:
+    title: PlatformTest
+    description: >-
+      This define the API for the PlatformTest API which can be used to validate an API environment. Platform Test simply
+
+      reflects back the payload sent in the response body plus a couple of additional attributes to confirm when the backend
+
+      executed and where
+    contact: {}
+    version: '1.0'
+  servers:
+
+  - url: https://pte.hub01.api.ikeadt.com/
+
+  - url: https://cte-f.hub01.api.ikeadt.com/
+    variables: {}
+  paths:
+    /PlatformTest:
+      get:
+        summary: Perform Get
+        description: Reflects back to the caller the received header information along with specific elements typically expected by Spring
+        operationId: PerformGet
+        parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          style: simple
+          schema:
+            type: string
+            example: application/json
+        responses:
+          '200':
+            description: ''
+            headers: {}
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example: {}
+                example: {}
+        deprecated: false
+      patch:
+        summary: Perform Patch
+        description: Reflects back to the caller the received header information along with specific elements typically expected by Spring
+        operationId: PerformPatch
+        parameters: []
+        requestBody:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+              example: {}
+          required: true
+        responses:
+          '200':
+            description: ''
+            headers: {}
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example: {}
+                example: {}
+        deprecated: false
+      post:
+        summary: Perform Post
+        description: Reflects back to the caller the received header information along with specific elements typically expected by SpringThe only difference here is to be properly compliant the response code needs to be 201
+        operationId: PerformPost
+        parameters: []
+        requestBody:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+              example: {}
+          required: true
+        responses:
+          '201':
+            description: ''
+            headers: {}
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example: {}
+                example: {}
+        deprecated: false
+      put:
+        summary: Perform Put
+        description: Reflects back to the caller the received header information along with specific elements typically expected by Spring
+        operationId: PerformPut
+        parameters: []
+        requestBody:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+              example: {}
+          required: true
+        responses:
+          '202':
+            description: ''
+            headers: {}
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example: {}
+                example: {}
+        deprecated: false
+      delete:
+        summary: Perform Delete
+        description: Reflects back to the caller the received header information along with specific elements typically expected by SpringThe only difference here is to be properly compliant the response code needs to be 202
+        operationId: PerformDelete
+        parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          style: simple
+          schema:
+            type: string
+            example: application/json
+        responses:
+          '202':
+            description: ''
+            headers: {}
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example: {}
+                example: {}
+        deprecated: false
+  tags: []
+contentType: yaml
